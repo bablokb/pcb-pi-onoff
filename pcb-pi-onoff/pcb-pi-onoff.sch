@@ -980,7 +980,6 @@ NoConn ~ 2300 1350
 NoConn ~ 2300 1650
 NoConn ~ 2300 1750
 NoConn ~ 2300 1950
-NoConn ~ 2300 2050
 NoConn ~ 2300 2150
 NoConn ~ 2300 2250
 NoConn ~ 2300 2450
@@ -991,9 +990,6 @@ NoConn ~ 1800 2550
 NoConn ~ 1800 2450
 NoConn ~ 1800 2350
 NoConn ~ 1800 2250
-NoConn ~ 1800 2050
-NoConn ~ 1800 1950
-NoConn ~ 1800 1850
 NoConn ~ 1800 1650
 NoConn ~ 1800 1550
 Wire Wire Line
@@ -1078,4 +1074,83 @@ Wire Notes Line
 	1950 3550 650  3550
 Text Notes 1500 4500 0    50   ~ 0
 I2C-extern
+Wire Wire Line
+	650  1850 1800 1850
+Text Label 650  1850 0    50   ~ 0
+GPIO10(SPI-TX)
+Wire Wire Line
+	650  1950 1800 1950
+Text Label 650  1950 0    50   ~ 0
+GPIO9(SPI-RX)
+Wire Wire Line
+	650  2050 1800 2050
+Text Label 650  2050 0    50   ~ 0
+GPIO11(SPI-CLK)
+Wire Wire Line
+	3450 2050 2300 2050
+Text Label 3450 2050 2    50   ~ 0
+GPIO8(SPI-CE0)
+$Comp
+L Connector:Conn_01x06_Male J9
+U 1 1 60C64E02
+P 2500 4100
+F 0 "J9" H 2750 4550 50  0000 C CNN
+F 1 "Conn_01x06_SPI" H 2800 4450 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 2500 4100 50  0001 C CNN
+F 3 "~" H 2500 4100 50  0001 C CNN
+	1    2500 4100
+	1    0    0    -1  
+$EndComp
+Text Label 3050 3900 0    50   ~ 0
+GPIO9(SPI-RX)
+Text Label 3050 4000 0    50   ~ 0
+GPIO8(SPI-CE0)
+Text Label 3050 4100 0    50   ~ 0
+GPIO10(SPI-TX)
+Text Label 3050 4200 0    50   ~ 0
+GPIO11(SPI-CLK)
+$Comp
+L power:GND #PWR02
+U 1 1 60C65E52
+P 3050 4300
+F 0 "#PWR02" H 3050 4050 50  0001 C CNN
+F 1 "GND" V 3050 4050 50  0000 C CNN
+F 2 "" H 3050 4300 50  0001 C CNN
+F 3 "" H 3050 4300 50  0001 C CNN
+	1    3050 4300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3.3V #PWR018
+U 1 1 60C6639C
+P 3050 4400
+F 0 "#PWR018" H 3050 4250 50  0001 C CNN
+F 1 "+3.3V" V 3050 4650 50  0000 C CNN
+F 2 "" H 3050 4400 50  0000 C CNN
+F 3 "" H 3050 4400 50  0000 C CNN
+	1    3050 4400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2700 3900 3050 3900
+Wire Wire Line
+	2700 4000 3050 4000
+Wire Wire Line
+	2700 4100 3050 4100
+Wire Wire Line
+	2700 4200 3050 4200
+Wire Wire Line
+	2700 4300 3050 4300
+Wire Wire Line
+	2700 4400 3050 4400
+Wire Notes Line
+	2400 3550 2400 4500
+Wire Notes Line
+	2400 4500 3900 4500
+Wire Notes Line
+	3900 4500 3900 3550
+Wire Notes Line
+	3900 3550 2400 3550
+Text Notes 3450 4500 0    50   ~ 0
+SPI-extern
 $EndSCHEMATC
