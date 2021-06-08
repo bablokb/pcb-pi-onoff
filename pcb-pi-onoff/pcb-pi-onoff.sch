@@ -1013,4 +1013,69 @@ F 4 "C96123" H 6100 3250 50  0001 C CNN "LCSC"
 	1    0    0    -1  
 $EndComp
 Connection ~ 6100 3100
+$Comp
+L Connector:Conn_01x04_Male J2
+U 1 1 60BFEDEF
+P 800 4100
+F 0 "J2" H 1100 4550 50  0000 C CNN
+F 1 "Conn_01x04_I2C" H 1100 4400 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 800 4100 50  0001 C CNN
+F 3 "~" H 800 4100 50  0001 C CNN
+	1    800  4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 60BFFA58
+P 1250 3950
+F 0 "#PWR0106" H 1250 3700 50  0001 C CNN
+F 1 "GND" V 1250 3700 50  0000 C CNN
+F 2 "" H 1250 3950 50  0001 C CNN
+F 3 "" H 1250 3950 50  0001 C CNN
+	1    1250 3950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3.3V #PWR0107
+U 1 1 60C00252
+P 1250 4100
+F 0 "#PWR0107" H 1250 3950 50  0001 C CNN
+F 1 "+3.3V" V 1250 4350 50  0000 C CNN
+F 2 "" H 1250 4100 50  0000 C CNN
+F 3 "" H 1250 4100 50  0000 C CNN
+	1    1250 4100
+	0    1    1    0   
+$EndComp
+Text Label 1400 4250 0    50   ~ 0
+GPIO3(SCL1)
+Text Label 1400 4350 0    50   ~ 0
+GPIO2(SDA1)
+Wire Wire Line
+	1000 4000 1250 4000
+Wire Wire Line
+	1000 4100 1250 4100
+Wire Wire Line
+	1000 4200 1250 4200
+Wire Wire Line
+	1250 4200 1250 4250
+Wire Wire Line
+	1000 4300 1250 4300
+Wire Wire Line
+	1250 4300 1250 4350
+Wire Wire Line
+	1250 4000 1250 3950
+Wire Wire Line
+	1250 4250 1400 4250
+Wire Wire Line
+	1250 4350 1400 4350
+Wire Notes Line
+	650  3550 650  4500
+Wire Notes Line
+	650  4500 1950 4500
+Wire Notes Line
+	1950 4500 1950 3550
+Wire Notes Line
+	1950 3550 650  3550
+Text Notes 1500 4500 0    50   ~ 0
+I2C-extern
 $EndSCHEMATC
